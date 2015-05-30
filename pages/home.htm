@@ -1,0 +1,155 @@
+title = "Lyes'Sam | PortFolio"
+url = "/"
+layout = "default"
+hidden = "0"
+meta_title = "Lyes'Sam Portfolio"
+meta_description = "description"
+
+[gallery]
+idGallery = "1"
+lang = "Gallery"
+jqueryinject = "no"
+thumbnail = "true"
+caption = "true"
+desc = "true"
+counter = "true"
+controls = "true"
+preload = "1"
+mode = "fade"
+speed = "500"
+loop = "true"
+auto = "true"
+pause = "3000"
+escKey = "true"
+height = "100"
+width = "100"
+resizer = "crop"
+
+[editable editable_g_h2]
+file = "general/h2.htm"
+
+[editable editable_g_description]
+file = "general/description.htm"
+
+[editable editable_g_h31]
+file = "general/h3-1.htm"
+
+[editable editable_g_h32]
+file = "general/h3-2.htm"
+
+[editable editable_g_ablity_1_title]
+file = "general/ability_1_title.htm"
+
+[editable editable_g_ablity_2_title]
+file = "general/ability_2_title.htm"
+
+[editable editable_g_ablity_3_title]
+file = "general/ability_3_title.htm"
+
+[editable editable_g_ablity_1_description]
+file = "general/ability_1_description.htm"
+
+[editable editable_g_ablity_2_description]
+file = "general/ability_2_description.htm"
+
+[editable editable_g_ablity_3_description]
+file = "general/ability_3_description.htm"
+
+[editable editable_f_h2]
+file = "folio/subtitle.htm"
+
+[editable editable_c_h2]
+file = "contact/subtitle.htm"
+
+[editable editable_g_ablity_1_ico]
+file = "icons/ability_1.htm"
+
+[editable editable_g_ablity_2_ico]
+file = "icons/ability_2.htm"
+
+[editable editable_g_ablity_3_ico]
+file = "icons/ability_3.htm"
+
+[contactForm]
+injectBootstrapAssets = "0"
+injectMainScript = "1"
+
+[googleTracker]
+==
+<!-- about -->
+            <section id="about" data-scroll-index="1">
+                <h1>A propos</h1>
+                <h2>{% component 'editable_g_h2' %}</h2>
+
+                <div class="general">
+                    <h3>{% component 'editable_g_h31' %}</h3>
+                    <img src="{{ 'assets/img/lyes.png'|theme }}" alt="Lyes">
+                    
+                    {% component 'editable_g_description' %}
+                    
+                </div>
+
+                <div class="more">
+                    <h3>{% component 'editable_g_h32' %}</h3>
+                    <div class="ability"> 
+                        {% component 'editable_g_ablity_1_ico' %}
+                        <h4>{% component 'editable_g_ablity_1_title' %}</h4> 
+                        <p>{% component 'editable_g_ablity_1_description' %}</p>
+                    </div>
+                    <div class="ability"> 
+                        {% component 'editable_g_ablity_2_ico' %}
+                        <h4>{% component 'editable_g_ablity_2_title' %}</h4> 
+                        <p>{% component 'editable_g_ablity_2_description' %}</p>
+                    </div>
+                    <div class="ability"> 
+                        {% component 'editable_g_ablity_3_ico' %}
+                        <h4>{% component 'editable_g_ablity_3_title' %}</h4> 
+                        <p>{% component 'editable_g_ablity_3_description' %}</p>
+                    </div>
+                </div>
+            </section>
+            <!--/about -->
+
+            <!-- folio -->
+            <section id="folio" data-scroll-index="2">
+                <h1>Portfolio</h1>
+                <h2>{% component 'editable_f_h2' %}</h2>
+
+            {% component 'gallery' %}
+            </section>
+            <!--/folio -->
+            <!-- contact -->
+            <section id="contact" data-scroll-index="3">
+                <h1>Contact</h1>
+                <h2>{% component 'editable_c_h2' %}</h2>
+                
+                <form class="flexiContactForm" role="form" data-request="contactForm::onMailSent" data-request-update="'contactForm::confirm': '.confirm-container'">
+                
+                    <fieldset>
+                        <label for="name">Nom/Pseudonyme:</label>
+                        <input type="text" class="form-control" value=""  name="name">
+                    </fieldset>
+                
+                    <fieldset>
+                        <label for="email">Email:</label>
+                        <input type="text" class="form-control" value="" name="email">
+                    </fieldset>
+                
+                    <fieldset>
+                        <label for="subject">Sujet:</label>
+                        <input type="text" class="form-control" value="" name="subject">
+                    </fieldset>
+                
+                    <fieldset>
+                        <label for="body">Message:</label>
+                        <textarea class="form-control" value="" name="body"></textarea>
+                    </fieldset>
+                 <div class="confirm-container">
+                    <!--This will contain the confirmation when the email is successfully sent-->
+                </div>
+                    <input type="submit" value="Envoyer" hidefocus="true" style="outline: none;"> 
+                
+                </form>
+            </section>
+            <!-- contact -->
+            {% component 'googleTracker' %}

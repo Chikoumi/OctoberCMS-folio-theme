@@ -1,0 +1,76 @@
+description = "Default layout"
+
+[editable editable_header_title]
+file = "header/title.htm"
+
+[editable editable_header_subtitle]
+file = "header/subtitle.htm"
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ this.page.title }}</title>
+        
+        <meta name="description" content="{{ this.page.meta_description }}">
+        <meta name="title" content="{{ this.page.meta_title }}">
+		<meta name="Content-Type" content="UTF-8">
+		<meta name="Content-Language" content="fr">
+		<meta name="Subject" content="Peinture">
+		<meta name="Author" content="Chikoumi">
+		<meta name="Publisher" content="Lyes'Sam">
+		<meta name="Revisit-After" content="5 days">
+		<meta name="Robots" content="all">
+		<meta name="Rating" content="general">
+		<meta name="Distribution" content="global">
+		<meta name="Geography" content="54500 NANCY">
+		<meta name="Category" content="art">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="icon" type="image/png" href="{{ 'assets/img/lyes.png'|theme }}">
+        
+        {% styles %}
+        <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link href="{{ 'assets/css/style.css'|theme }}" rel="stylesheet">
+    </head>
+    <body>
+
+        {% partial "navigation" %}
+<!-- header-->
+        <header data-scroll-index="0">
+            <h1>{% component 'editable_header_title' %}</h1>
+            <h2>{% component 'editable_header_subtitle' %}</h2>
+        </header>
+<!--/header-->
+        <!--content-page -->
+        <div class="content">
+            {% page %}
+        </div>
+        <!--content-page -->
+        
+        <!-- Footer -->
+            {% partial "footer" %}
+        <!-- Scripts -->
+        <script src="{{ [
+            'assets/js/jquery-1.11.3.min.js',
+            'assets/js/scrollIt.js',
+            'assets/js/script.js'
+        ]|theme }}"></script>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        
+          ga('create', 'UA-63372933-1', 'auto');
+          ga('send', 'pageview');
+        
+        </script>
+        {% framework %}
+        {% framework extras %}
+        {% scripts %}
+
+    </body>
+</html>

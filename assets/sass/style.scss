@@ -1,0 +1,511 @@
+@import 'compass';
+
+$color: #48CFAD;
+$bgcolor: #FFF;
+$duration:0.4s;
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    background: $bgcolor;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;        
+}
+
+h2 {
+    text-align: center;
+    color: #777;
+}
+
+a {
+    text-decoration: none;
+    color: initial;
+}
+/* header */
+
+header {
+    margin-top: 55px;
+    text-align: center;
+    padding: 40px 0;
+    color: #24282d;
+    height: 500px;
+    background-image: url('../img/header.jpg');
+    background-position: center bottom;
+    background-size: cover;
+    overflow: hidden;
+    h1 {
+        font-size: 50px;
+        line-height: 1.1;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #fff;
+        margin: 0;
+        margin-top: 150px;
+        @include transition(font-size $duration);
+    }
+
+    h2 {
+        color: #FCFCFC;
+        font-size: 30px;
+        line-height: 1;
+        font-weight: normal;
+        font-style: italic;
+        margin: 0;
+    }
+}
+/* nav */
+
+nav {
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    background-color: $color;
+    display: block;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0; 
+
+        li {
+            display: inline-block;
+
+            a {
+                background-color: $color;
+                color: #FFF;
+                display: block;
+                padding: 20px 30px;
+                text-decoration: none;
+                text-transform: uppercase;
+                @include transition(all $duration);
+                span {
+                    display: none;
+                }
+            }
+
+            a:hover, a.active {
+                background-color: shade($color, 10%);
+            }
+
+        }
+    }
+
+}
+
+
+/* content */
+.content {
+    margin: auto;
+    width: 90%;
+    > section {
+        padding-top: 100px;
+    }
+
+    h1:after {
+        content: '';
+        width: 20%;
+        height: 3px;
+        background: $color;
+        display: block;
+        margin: 5px auto 1px auto;
+    }
+
+    h1:before {
+        font-family: 'FontAwesome';
+        font-weight: normal;
+        font-style: normal;
+
+        text-decoration: inherit;
+        line-height: 1;
+
+        margin-right: 10px;
+        margin-left: -10px;
+
+        display: inline-block;
+        vertical-align: top;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+
+        font-size: 15px;
+        line-height:30px;
+        outline: 0;
+
+        color: #fff;
+        background-color: $color;
+    }
+}
+
+/* about */
+
+#about {
+    h1:before {
+        content: '\f129';
+    }
+    .general {
+        img {
+            border-radius: 10px;
+            width: 90%;
+            margin: auto;
+            display: block;
+            border: 3px solid $color;
+        }
+
+        p {
+            text-align: justify;
+        }
+    }
+
+    .ability {
+        text-align: center;
+        .fa {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+
+            font-size: 50px;
+            line-height: 95px;
+            outline: 0;
+
+            color: #fff;
+            background-color: $color;
+        }
+
+        h4 {
+            font-size: 20px;
+        }
+    }
+}
+
+/* portfolio */
+
+#folio {
+
+    h1:before {
+        content: '\f03e';
+    }
+    article {
+        position: absolute;
+        margin-top: 30px;
+        position: relative;
+        box-shadow: 0px 0px 20px rgba(0,0,0, 0.1);
+        @include transition(box-shadow $duration);
+        width: 100%;
+        height: auto;
+        margin: auto;
+        margin-bottom: 30px;
+        overflow: hidden;
+
+        section {
+            margin: 0;
+        }
+
+        .folio_thumb {
+            width: 100%;
+            height: 250px;
+            background-position: center bottom;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .folio_content {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            color: #fff;
+            text-align: center;
+            background: rgba($color, 0.5);
+            @include transition(opacity $duration);
+            &:after {
+                font-family: 'FontAwesome';
+                font-weight: normal;
+                font-style: normal;
+                display: inline-block;
+                text-decoration: inherit;
+                line-height: 1;
+                content: '\f055';
+                font-size: 35px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                @include transform(translateX(-50%) translateY(-50%));
+            }
+            h3 {
+                font-size: 40px;
+            }
+
+        }
+    }
+
+
+    article:hover {
+        box-shadow: 0px 0px 50px rgba(0,0,0, 0.3);
+        .folio_content {
+            opacity:1;
+        }
+    }
+}
+
+/* contact */
+#contact  {
+    h1:before {
+        content: '\f003';
+    }
+    fieldset{
+        border: none;
+    }
+    legend {
+        font-size: 1.4em;
+        margin-bottom: 10px;
+    }
+    label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+    input[type="text"],
+    input[type="date"],
+    input[type="datetime"],
+    input[type="email"],
+    input[type="number"],
+    input[type="search"],
+    input[type="time"],
+    input[type="url"],
+    textarea,
+    select {
+        background: rgba(255,255,255,.1);
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        margin: 0;
+        outline: 0;
+        padding: 7px;
+        width: 100%;
+        box-sizing: border-box; 
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box; 
+        background-color: #e8eeef;
+        color:#8a97a0;
+        -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+        box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+        margin-bottom: 30px;
+
+    }
+    
+    textarea {
+        min-height: 250px;
+    }
+    input[type="text"]:focus,
+    input[type="date"]:focus,
+    input[type="datetime"]:focus,
+    input[type="email"]:focus,
+    input[type="number"]:focus,
+    input[type="search"]:focus,
+    input[type="time"]:focus,
+    input[type="url"]:focus,
+    textarea:focus,
+    select:focus{
+        background: #d2d9dd;
+    }
+    select{
+        -webkit-appearance: menulist-button;
+        height:35px;
+    }
+
+    input[type="submit"],
+    input[type="button"]
+    {
+        padding: 19px 39px 18px 39px;
+        color: #FFF;
+        min-width: 1px;
+        margin: auto;
+        background: $color;
+        font-size: 18px;
+        text-align: center;
+        font-style: normal;
+        border: 1px solid #16a085;
+        border-width: 1px 1px 3px;
+        margin-bottom: 40px;
+        display: block;
+    }
+    input[type="submit"]:hover,
+    input[type="button"]:hover
+    {
+        background: shade($color, 10%);
+        cursor: pointer;
+    }
+}
+/* reset float */
+
+#folio:after, #about:after, #about .general:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+
+/* footer */
+footer {
+    padding: 30px 20px 0px 20px;
+    background: $color;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    height: 100px;
+
+    .copy {
+        width: 50%;
+        float: left;
+        margin-top: 10px;
+    }
+    .social {
+        @extend .copy;
+        margin-top: 0;
+        a .fa {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            font-size: 20px;
+            line-height: 40px;
+            outline: 0;
+            color: #fff;
+            background-color: #222;
+            @include transition(all .3s);
+
+            &.fa-facebook {
+                background-color: #3B5998;
+            }
+
+            &.fa-twitter {
+                background-color: #55ACEE;
+            }
+
+            &.fa-envelope {
+                background-color: #656D78;
+            }
+        }
+    }
+    a {
+        color: #fff;
+    }
+}
+
+/* top */
+.top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    .fa {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        font-size: 20px;
+        line-height: 40px;
+        outline: 0;
+        color: #fff;
+        background-color: $color;
+        text-align: center;
+        opacity: 0.5;
+        @include transition(opacity $duration, font-size $duration);
+    }
+
+    &:hover {
+        .fa {
+            opacity: 1;
+            font-size: 25px;
+        }
+    }
+}
+/* Media queries */
+@media screen and (min-width: 768px) {
+    nav {
+        ul {
+            li {
+                a {
+                    i.fa {
+                        display: none;
+                    }
+                    span {
+                        display: block;
+                    }
+                }            
+            }
+        }
+    }
+    
+    header {
+        h1 {
+            font-size: 90px;
+        }
+    }
+    #folio {
+        article {
+            width: 30%;
+            height: 250px;
+            float: left; 
+            margin-right: 1.5%;
+            margin-left: 1.5%;
+            .folio_content {
+
+                &:after{
+                    font-size: 35px;
+                }
+                h3 {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+
+    #about {
+        .general {
+            img {
+                height: 210px;
+                width: 210px;
+                float: left;
+                margin-right: 20px;
+                margin-bottom: 2px;
+            }
+        }
+
+        .ability {
+            width: 30%;
+            margin-right: 1.5%;
+            margin-left: 1.5%;
+            float: left;
+        }
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    #folio {
+        article {
+            width: 22%;
+            float: left; 
+            margin-right: 1.5%;
+            margin-left: 1.5%;
+        }
+    }
+}
