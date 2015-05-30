@@ -3,8 +3,12 @@
 
 This is a one page portfolio website with about, gallery and contact form.
 ## Information :
+#### Live Edtion :
 
-Use it with RJ GALLERY and modify end of raviraj/rjgallery/components/gallery/default.htm wtih :
+This theme is using [Editable](https://octobercms.com/plugin/rainlab-editable), to generate an edit content on live.
+
+#### Gallery
+Use it with [RJ GALLERY](https://octobercms.com/plugin/raviraj-rjgallery) and modify end of raviraj/rjgallery/components/gallery/default.htm wtih :
 
 
 ```html
@@ -21,10 +25,14 @@ Use it with RJ GALLERY and modify end of raviraj/rjgallery/components/gallery/de
         </div>
     </section>
 </article>
-<!---/article-->      
-```
+<!---/article--> 
 {% endfor %}
 </div>
+```
+
+#### Contact form :
+
+Ready for [Flexy-contact](https://octobercms.com/plugin/laminsanneh-flexicontact)
 
 
 ## Preview
