@@ -1,7 +1,9 @@
 # [October CMS](http://octobercms.com) portfolio theme
 
-
 This is a one page portfolio website with about, gallery and contact form.
+
+**Please notice that this 3 free plugins ( [Editable](https://octobercms.com/plugin/rainlab-editable) , [Flexy-contact](https://octobercms.com/plugin/laminsanneh-flexicontact), [RJ GALLERY](https://octobercms.com/plugin/raviraj-rjgallery)) are requiered in the default _index files_**, if you doesn't want to use them use _only-html.htm_.
+
 ## Information :
 #### Live Edtion :
 
@@ -33,17 +35,3 @@ Use it with [RJ GALLERY](https://octobercms.com/plugin/raviraj-rjgallery) and mo
 #### Contact form :
 
 Ready for [Flexy-contact](https://octobercms.com/plugin/laminsanneh-flexicontact)
-
-
-## Preview
-### Header :
-![header](https://raw.githubusercontent.com/Chikoumi/OctoberCMS-folio-theme/master/assets/img/header.png "Header")
-
-### About :
-![about](https://raw.githubusercontent.com/Chikoumi/OctoberCMS-folio-theme/master/assets/img/about.png "About")
-
-### Gallery
-![Folio](https://raw.githubusercontent.com/Chikoumi/OctoberCMS-folio-theme/master/assets/img/folio.png "Folio")
-
-### Contact
-![Contact](https://raw.githubusercontent.com/Chikoumi/OctoberCMS-folio-theme/master/assets/img/contact.png "Contact")
