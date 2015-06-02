@@ -38,7 +38,7 @@ Use it with [RJ GALLERY](https://octobercms.com/plugin/raviraj-rjgallery) and mo
 
 #### Contact form :
 
-Ready for [Flexy-contact](https://octobercms.com/plugin/laminsanneh-flexicontact)
+Ready for [FlexiContact](https://octobercms.com/plugin/laminsanneh-flexicontact)
 
 
 ## Header :
