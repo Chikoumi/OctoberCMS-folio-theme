@@ -1,27 +1,15 @@
 {
-    "name": "october/demo-theme",
+    "name": "chikoumi/folio-theme",
     "type": "october-theme",
-    "description": "Demo OctoberCMS theme",
-    "keywords": ["october", "cms", "demo", "theme"],
+    "description": "This is a one page portfolio (Using Scrollit.js) website with about content, gallery and contact form section.",
+    "keywords": ["october", "cms", "folio", "theme"],
     "license": "MIT",
-    "authors": [
+    "author": [
         {
-            "name": "Alexey Bobkov",
-            "email": "aleksey.bobkov@gmail.com",
-            "role": "Co-founder"
+            "name": "Chikoumi",
+            "email": "contact@chikoumi.com",
+            "role": "Author"
         },
         {
-            "name": "Samuel Georges",
-            "email": "daftspunky@gmail.com",
-            "role": "Co-founder"
-        }
-    ],
-    "require": {
-        "php": ">=5.4"
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0-dev"
-        }
-    }
+    ]
 }
