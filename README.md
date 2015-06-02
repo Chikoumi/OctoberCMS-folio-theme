@@ -52,3 +52,8 @@ Ready for [Flexy-contact](https://octobercms.com/plugin/laminsanneh-flexicontact
 
 ## Contact
 ![Contact](https://raw.githubusercontent.com/Chikoumi/OctoberCMS-folio-theme/master/assets/img/contact.png "Contact")
+
+## Mobile Version
+
+![Mobile-Version](https://raw.githubusercontent.com/Chikoumi/OctoberCMS-folio-theme/master/assets/img/mobile.png "Mobile-Version")
+
