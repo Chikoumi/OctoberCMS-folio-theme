@@ -4,6 +4,10 @@ This is a one page portfolio website with about, gallery and contact form.
 
 **Please notice that this 3 free plugins ( [Editable](https://octobercms.com/plugin/rainlab-editable) , [Flexy-contact](https://octobercms.com/plugin/laminsanneh-flexicontact), [RJ GALLERY](https://octobercms.com/plugin/raviraj-rjgallery)) are requiered in the default index file (_home.htm_)**, if you doesn't want to use them _home-only-html.htm_
 
+##Demo :
+* [Plugged Version](http://demo-folio.chikoumi.com), you can also take a look to screenshot below.
+* [Only Html version](http://demo-folio.chikoumi.com/only-html)
+
 ## Information :
 #### Live Edtion :
 
