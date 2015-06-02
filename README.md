@@ -2,7 +2,7 @@
 
 This is a one page portfolio website with about, gallery and contact form.
 
-**Please notice that this 3 free plugins ( [Editable](https://octobercms.com/plugin/rainlab-editable) , [Flexy-contact](https://octobercms.com/plugin/laminsanneh-flexicontact), [RJ GALLERY](https://octobercms.com/plugin/raviraj-rjgallery)) are requiered in the default _index files_**, if you doesn't want to use them use _only-html.htm_.
+**Please notice that this 3 free plugins ( [Editable](https://octobercms.com/plugin/rainlab-editable) , [FlexiContact](https://octobercms.com/plugin/laminsanneh-flexicontact), [RJ GALLERY](https://octobercms.com/plugin/raviraj-rjgallery)) are requiered in the default _index files_**, if you doesn't want to use them use _only-html.htm_.
 
 ## Information :
 #### Live Edtion :
